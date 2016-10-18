@@ -14,6 +14,7 @@
 			title: false,
 			speed: 300,
 			resize: true,
+			animate: true
 		}, options);
 
 		var menu = $(this),
@@ -36,7 +37,10 @@
 		};
 
 		var transition = function(speed) {
-			return;
+			if (settings.animate) {
+				menu.css('transition-duration', speed + 'ms');
+				root.css('transition-duration', speed + 'ms');
+			}
 		};
 
 		transition(settings.speed);
