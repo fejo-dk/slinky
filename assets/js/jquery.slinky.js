@@ -36,8 +36,7 @@
 		};
 
 		var transition = function(speed) {
-			menu.css('transition-duration', speed + 'ms');
-			root.css('transition-duration', speed + 'ms');
+			return;
 		};
 
 		transition(settings.speed);
